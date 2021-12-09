@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+  #buttonclick , #buttonclick:visited{
+    border-color: #C63A18;
+    background-color: #C63A18;
+    font-size: 2rem;
+    width: 310px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+  }
+  #buttonclick:hover , #buttonclick:active  {
+    border-color: #000;
+    background-color: #000;
+    color: #fff;
+  }
+  #buttonclick:focus {
+    box-shadow: none;
+  }
+        

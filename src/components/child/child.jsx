@@ -1,13 +1,14 @@
 import React from 'react'
 import {useDispatch } from 'react-redux';
 import { getUser} from '../../redux/action';
+import './index.css';
 
 function Child() {
 
   const dispatch = useDispatch()
 
     return (
-        <button type="button" className="btn btn-primary"  onClick={() => dispatch( getUser())}  >click me</button>
+        <button id="buttonclick" type="button" className="btn m-2 pt-2 pb-2"  onClick={() => dispatch( getUser())}  >click me</button>
     );
 }
 

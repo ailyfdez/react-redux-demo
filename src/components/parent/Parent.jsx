@@ -8,9 +8,12 @@ import { getUser } from '../../redux/selectors/child'
 
 function Parent() {
     const userName = useSelector(state => getUser(state));
-    
+
     return (
-        <><div> Hola soy {userName}</div><Child></Child></>
+        <div className="container">
+            <h1> Hola soy {userName}</h1>
+            <Child></Child>
+        </div>
     );
 }
 
