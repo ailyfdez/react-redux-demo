@@ -1,10 +1,10 @@
 import { createAction } from "@reduxjs/toolkit";
 
+export const getAmount = createAction("[Bank account] get amount");
 
-export const saveUser = createAction("[child comp] save user",
-    function prepare(user: string) {
+export const saveAmount = createAction("[Bank account] save amount",
+    function prepare(amount: number) {
         return {
-            payload: user,
+            payload: amount,
         };
     });
-export const getUser = createAction("[child comp] get user");

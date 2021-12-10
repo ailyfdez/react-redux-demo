@@ -2,7 +2,7 @@ import { combineReducers } from "@reduxjs/toolkit";
 import { childReducer } from "./child";
 
 const rootReducer = combineReducers({
-    child: childReducer,
+    'bank account': childReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

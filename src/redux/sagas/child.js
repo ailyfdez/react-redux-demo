@@ -1,11 +1,11 @@
 import { call, put, takeLatest } from "redux-saga/effects";
-import UserService from "../../services/user";
-import { saveUser } from "../action";
+import BankAccountService from "../../services/bankAccount";
+import { saveAmount, getAmount } from "../action";
 
-function* loadUserName() {
+function* loadAmount() {
   try {
-    const name = yield call( UserService.getUser);
-    yield put(saveUser(name));
+    const value = yield call(BankAccountService.getAmount);
+    yield put(saveAmount(value));
   } catch (e) {
     console.log(e);
   }
@@ -13,7 +13,7 @@ function* loadUserName() {
 
 
 function* childSaga() {
-  yield takeLatest('[child comp] get user', loadUserName);
+  yield takeLatest(getAmount, loadAmount);
 }
 
 export default childSaga;

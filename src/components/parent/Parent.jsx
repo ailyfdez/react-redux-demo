@@ -3,15 +3,15 @@ import React from 'react';
 
 import { useSelector } from 'react-redux'
 import Child from "../child/child";
-import { getUser } from '../../redux/selectors/child'
+import { getAmount } from '../../redux/selectors/child'
 
 
 function Parent() {
-    const userName = useSelector(state => getUser(state));
+    const amount = useSelector(state => getAmount(state));
 
     return (
         <div className="container">
-            <h1> Hola soy {userName}</h1>
+            <h1> Count ${amount}</h1>
             <Child></Child>
         </div>
     );

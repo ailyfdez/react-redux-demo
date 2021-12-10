@@ -1,3 +1,3 @@
-export const getUser = (state) => {
-    return state.child.user;
+export const getAmount = (state) => {
+    return state['bank account']?.amount;
   };
