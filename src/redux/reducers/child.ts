@@ -1,7 +1,8 @@
 
 import { createReducer } from "@reduxjs/toolkit";
 import {
-    saveAmount
+    getAmount,
+    setAmount
 } from "../action";
 
 const initialState = {
@@ -9,7 +10,7 @@ const initialState = {
 };
 
 export const childReducer = createReducer(initialState, {
-    [saveAmount.type]: (state, action) => ({
+    [setAmount.type]: (state, action) => ({
         ...state,
         amount: action.payload,
     }),
